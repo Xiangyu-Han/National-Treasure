@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>国家宝藏-文物页面</title>
+    <link href="玉琮.css" rel="stylesheet" media="screen">
+    <link href="css8/bootstrap.min.css" rel="stylesheet" media="screen">
+    <script type="text/javascript" src="jquery8/jquery.js"></script>
+    <script src="js8/bootstrap.min.js"></script>
+</head>
+<body class="a">
+<!--头部-->
+<div class="b">
+    <img src="img玉琮/banner.jpg" alt="张国立" style="height: auto;width: 98.9vw;">
+    <div id="header">
+        <div class="btn-group" id="user">
+            <a href=""><button type="button" class="btn btn-link" style="font-size: 1.3vw;width: 14vw">昵称<p id="user_name"></p></button></a>
+        </div>
+        <div class="btn-group" style="margin-left: 6vw">
+            <a href="shouye.html"><button type="button" class="btn btn-link">国家宝藏</button></a>
+        </div>
+        <div class="btn-group" >
+            <a href="museum.html"><button type="button" class="btn btn-link">博览群馆</button></a>
+        </div>
+        <div class="btn-group" >
+            <a href="wwzs.html"><button type="button" class="btn btn-link">文物之声</button></a>
+        </div>
+        <div class="btn-group" >
+            <a href="shipin.html"><button type="button" class="btn btn-link">系列视频</button></a>
+        </div>
+        <div class="btn-group" >
+            <a href="about.html"><button type="button" class="btn btn-link">关于我们</button></a>
+        </div>
+    </div>
+  <!--主体-->
+    <div><img src="img玉琮/1.jpg" class="picture1" alt="玉琮" /></div>
+    <div><img src="img玉琮/2.jpg" class="picture2" alt="玉琮2" /></div>
+    <div class="wenben1">1986年出土于浙江省杭州市北部的余杭反山12号墓，通高8. 9厘米，整器重约6500克， 纹饰独特繁缛。具象完整的“神人兽面”纹以细密的阴线刻划在四面中间的竖槽中。同时，“神人兽面”图案又以每个转角为中轴线向两侧展开，是良渚文化玉琮纹样的基本特征。此玉琮是目前发掘出土良渚玉琮中最大、最重、做工最精美的一件，通称“琮王”。它也正是中华五千年文明”的实物力证。</div>
+    <div><img src="img玉琮/3.jpg" class="picture3" alt="玉琮3" /></div>
+    <div><img src="img玉琮/4.jpg" class="picture4" alt="玉琮4" /></div>
+    <div class="wenben2"><h1 style="text-indent:3em;">玉琮</h1>活了五千多年的礼器,已经没人记得他的具体使用方法了,连他自己也不记得。家里的兄弟姐妹体型外貌款式很多,啥型号都有。出生的时代人们的技术很不发达,吃了很多苦,不过终究是顺利出生了。从出生就跟着只不知道像啥的怪物,虽然看起来很凶,但其实挺无害粘人的.....所以由它去了。</div>
+</div>
+<!--页脚-->
+<div class="footer">
+    <div class="footer2">
+        <a href="#" class="FontColor2">意见反馈</a><br>
+        <a href="#" class="FontColor2">账号申诉</a><br>
+        <a href="#" class="FontColor2">智能咨询</a><br>
+    </div>
+    <div class="footer3">
+        <a href="#" class="FontColor2">常见问题</a><br>
+        <a href="#" class="FontColor2">加入我们</a><br>
+        <a href="#" class="FontColor2">在线留言</a><br>
+    </div>
+</div>
+<script src="js/jquery.min.js?v=2.1.4"></script>
+<script src="js/jquery.cookie.js"></script>
+<script type="text/javascript">
+    $(document).ready(function(){
+        var name = $.cookie("uName");
+        console.log(name);
+        if((name != null)){
+            $("#user_name").empty();
+            $("#user_name").append(name);
+        }
+    });
+</script>
+</body>
+</html>

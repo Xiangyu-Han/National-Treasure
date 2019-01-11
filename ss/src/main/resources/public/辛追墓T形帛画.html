@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>国家宝藏-文物页面</title>
+    <link href="辛追墓T形帛画.css" rel="stylesheet" media="screen">
+    <link href="css8/bootstrap.min.css" rel="stylesheet" media="screen">
+    <script type="text/javascript" src="jquery8/jquery.js"></script>
+    <script src="js8/bootstrap.min.js"></script>
+</head>
+<body class="a">
+<!--头部-->
+<div class="b">
+    <img src="img辛追墓T形帛画/banner.jpg" alt="张国立" style="height: auto;width: 98.9vw;">
+    <div id="header">
+        <div class="btn-group" id="user">
+            <a href=""><button type="button" class="btn btn-link" style="font-size: 1.3vw;width: 14vw">昵称<p id="user_name"></p></button></a>
+        </div>
+        <div class="btn-group" style="margin-left: 6vw">
+            <a href="shouye.html"><button type="button" class="btn btn-link">国家宝藏</button></a>
+        </div>
+        <div class="btn-group" >
+            <a href="museum.html"><button type="button" class="btn btn-link">博览群馆</button></a>
+        </div>
+        <div class="btn-group" >
+            <a href="wwzs.html"><button type="button" class="btn btn-link">文物之声</button></a>
+        </div>
+        <div class="btn-group" >
+            <a href="shipin.html"><button type="button" class="btn btn-link">系列视频</button></a>
+        </div>
+        <div class="btn-group" >
+            <a href="about.html"><button type="button" class="btn btn-link">关于我们</button></a>
+        </div>
+    </div>
+  <!--主体-->
+    <div><img src="img辛追墓T形帛画/1.jpg" class="picture1" alt="辛追墓T形帛画" /></div>
+    <div><img src="img辛追墓T形帛画/2.jpg" class="picture2" alt="辛追墓T形帛画2" /></div>
+    <div class="wenben1">1972年出上于长沙马王堆号汉菜的锦饰内棺盖板上，通长205厘米，顶端宽92厘米，末端宽47.7厘米。这幅彩绘吊画用单层的细组作地，绢地呈棕色、T形，上宽下窄，以三块细绢拼成，其图案内容描绘了蓦主人灵魂通向天国的神秘过程，构图完美浪漫，色彩鲜艳和谐。从其发现位置可推知，该帛画与表示死者身份的铭旌有关。其保存完整，色彩鲜艳，内容丰富，形象生动，技法精妙，是不可多得的艺术珍品。</div>
+    <div><img src="img辛追墓T形帛画/3.jpg" class="picture3" alt="辛追墓T形帛画3" /></div>
+    <div><img src="img辛追墓T形帛画/4.jpg" class="picture4" alt="辛追墓T形帛画4" /></div>
+    <div class="wenben2"><h1 style="text-indent:2.3em;">辛追墓T形帛画</h1>在昏暗的地方住了很多年,发掘出来以后陈列的地方也很阴凉,严重见光死型选手。 随葬品,被称为引路人,实际根本没出过几次门,不知道是不是路痴。 在地下太寂寞了!跟着随行的几只灵兽学会了好几种爬行动物的语言,有对象可以聊天就很开心了。 太阴暗了看起来有点可怕,实际上是很好很亲切的家伙。被疏远了会沮丧。</div>
+</div>
+<!--页脚-->
+<div class="footer">
+    <div class="footer2">
+        <a href="#" class="FontColor2">意见反馈</a><br>
+        <a href="#" class="FontColor2">账号申诉</a><br>
+        <a href="#" class="FontColor2">智能咨询</a><br>
+    </div>
+    <div class="footer3">
+        <a href="#" class="FontColor2">常见问题</a><br>
+        <a href="#" class="FontColor2">加入我们</a><br>
+        <a href="#" class="FontColor2">在线留言</a><br>
+    </div>
+</div>
+
+<script src="js/jquery.min.js?v=2.1.4"></script>
+<script src="js/jquery.cookie.js"></script>
+<script type="text/javascript">
+    $(document).ready(function(){
+        var name = $.cookie("uName");
+        console.log(name);
+        if((name != null)){
+            $("#user_name").empty();
+            $("#user_name").append(name);
+        }
+    });
+</script>
+</body>
+</html>

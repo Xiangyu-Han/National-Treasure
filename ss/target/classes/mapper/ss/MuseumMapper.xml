@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ss.vv.ss.mapper.IMuseumMapper">
+	<resultMap id="baseResultMap" type="com.ss.vv.ss.domain.Museum">
+		<id column="museum_id" jdbcType="INTEGER" property="mId" />
+		<result column="museum_name" jdbcType="VARCHAR" property="mName" />
+		<result column="museum_url1" jdbcType="VARCHAR" property="mUrl1" />
+		<result column="museum_url2" jdbcType="VARCHAR" property="mUrl2" />
+		<result column="museum_url3" jdbcType="VARCHAR" property="mUrl3" />
+		<result column="museum_info1" jdbcType="LONGVARCHAR" property="mInfo1" />
+		<result column="museum_info2" jdbcType="LONGVARCHAR" property="mInfo2" />
+		<result column="museum_info3" jdbcType="LONGVARCHAR" property="mInfo3" />
+	</resultMap>
+	<sql id="baseColumnList">
+museum_id,museum_name,museum_url1,museum_url2,museum_url3,museum_info1,museum_info2,museum_info3  </sql>
+	<sql id="voColumnList">
+museum_id,museum_name,museum_url1,museum_url2,museum_url3,museum_info1,museum_info2,museum_info3	</sql>
+		<insert id="insert" useGeneratedKeys="true" keyProperty="entity.mId">
+		INSERT INTO ${tableName} (
+		museum_name, museum_url1, museum_url2,museum_url3,museum_info1,museum_info2,museum_info3
+		) VALUES (
+		#{entity.mName}, #{entity.mUrl1},#{entity.mUrl2},#{entity.mUrl3}, #{entity.mInfo1},#{entity.mInfo2},#{entity.mInfo3}
+		)	</insert>
+		<insert id="insertByBatch" parameterType="java.util.List">
+		INSERT INTO ${tableName} (
+		museum_name, museum_url1, museum_url2,museum_url3,museum_info1,museum_info2,museum_info3
+		) VALUES 
+		<foreach collection="list" item="entity" index="index" separator=",">
+			(#{entity.mName},#{entity.mUrl1},#{entity.mUrl2},#{entity.mUrl3}, #{entity.mInfo1},#{entity.mInfo2},#{entity.mInfo3})
+		</foreach>
+	</insert>
+		
+		<update id="update">
+		UPDATE ${tableName} SET 
+		museum_name=#{entity.mName}, museum_url1=#{entity.mUrl1},museum_url2=#{entity.mUrl2},museum_url3=#{entity.mUrl3},
+	    museum_info=#{entity.mInfo1}，museum_info=#{entity.mInfo2}，museum_info=#{entity.mInfo3}
+		 WHERE 
+		museum_id = #{entity.mId}
+	    </update>
+	
+	<select id="getById" parameterType="java.lang.Integer" resultMap="baseResultMap">
+		select
+		<include refid="voColumnList" />
+		from ${tableName} 
+		where museum_id = #{id}
+	</select>
+	
+	<select id="getOne" parameterType="java.util.Map" resultMap="baseResultMap">
+		select
+		<if test="field == null">
+			<include refid="voColumnList" />
+		</if>
+		<if test="field != null">
+			${field}
+		</if>
+		from ${tableName} 
+		<where>
+			<foreach collection="condition" index="key" item="value">
+				${value} ${key}
+			</foreach>
+		</where>
+		limit 1;
+	</select>
+	<select id="getCount" parameterType="java.util.Map" resultType="java.lang.Integer">
+		select
+		count(museum_id)
+		from ${tableName} 
+		<where>
+			<foreach collection="condition" index="key" item="value">
+				${value} ${key}
+			</foreach>
+		</where>
+	</select>
+	<!-- 这部分为根据传递参数，自动生成SQL -->
+	<select id="getList" parameterType="java.util.Map" resultMap="baseResultMap">
+		select
+		<if test="field == null">
+			<include refid="voColumnList" />
+		</if>
+		<if test="field != null">
+			${field}
+		</if>
+		from ${tableName} 
+		<where>
+			<foreach collection="condition" index="key" item="value">
+				${value} ${key}
+			</foreach>
+		</where>
+		<if test="order != null">
+			order by ${order}
+		</if>
+		<if test="limit != 0">
+			<if test="offset != 0">
+				limit ${offset}, ${limit}
+			</if>
+			<if test="offset == 0">
+				limit ${limit}
+			</if>
+		</if>
+	</select>
+	<!-- 判断表格是否存在，如果不存在可以配合createTable使用，用于动态创建表格 -->
+	<select id="existTable" parameterType="String" resultType="java.lang.Integer">
+		select count(table_name) from information_schema.TABLES WHERE table_name=#{tableName} ;
+	</select>
+	<update id="createTable" parameterType="String">
+		<!-- 这里是创建表格的SQL，复制过来，表名作为参数传递 -->
+		<!-- create table ${tableName} (   //  表名要这样写 -->
+	</update>
+	
+	
+	<cache />
+</mapper>

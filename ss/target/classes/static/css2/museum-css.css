@@ -1,0 +1,154 @@
+﻿@charset "utf-8";
+/* CSS Document */
+/*HTML背景样式*/
+body {
+	background-image: url(' ../img2/博物馆新背景.jpg');
+	background-size: 100vw auto;
+	background-repeat: no-repeat;
+}
+/*头部按钮样式*/
+#header{
+	margin:2vw 3vw;
+}
+#header div{
+	margin-left: 2.5vw;
+	width: 13%;
+	height: 20%;
+	text-align: center;
+}
+#header div button{
+	background: rgba(207,169,114,0.5);
+	font-family: "华文新魏";
+	font-size: 2vw;
+	color: #bfad5a;
+	height: 4vw;
+	-webkit-border-radius: 15px; 
+}
+/*左侧样式*/
+.nav {
+	width: 15vw;
+	height: 1vw;
+	margin-left: 4.5vw;
+}
+.nav-list {
+	padding-top: 5vw;
+	padding-bottom: 1vw;
+	text-align: center;
+	background: url(" ../img2/指引栏框.PNG") no-repeat;
+	background-size: 100% 100%;
+	color:#2F2B2B;
+}
+.list {
+	list-style-type: none;
+	font-size: 1.6vw;
+	padding-left: 10px;
+	padding-right: 10px;
+	font-family: "华文楷体";
+	color:#2F2B2B;
+}
+/*菜单栏链接样式*/
+a:link{
+	color:#3E3E41; 
+}
+a:visited{
+	color:#3E3E41;
+}
+a:hover{
+	color:#2F2B2B;
+}
+a:active{
+	color:#3E3E41;
+}
+/*正文样式*/
+.content {
+	width: 40vw;	
+	height: 1vw;
+	margin-left: 28vw;
+	font-size: 2vw;
+	font-family: "华文楷体";
+	color:#DCD0D0;
+	text-indent: 2em;
+	text-align: justify;
+}
+.content2 {
+	width: 28vw;	
+	height: 1vw;
+	font-size: 2vw;
+	font-family: "华文楷体";
+	color:#DCD0D0;
+	text-align: justify;
+	margin-top: 2vw;
+	position: absolute;
+	margin-left: 66vw;
+}
+.content3 {
+	width: 37vw;	
+	height: 1vw;
+	margin-left: 28vw;
+	font-size: 2vw;
+	font-family: "华文楷体";
+	color:#DCD0D0;
+	text-align: justify;
+}
+/*边框样式*/		
+.img1 {
+	width: 20vw;
+	height: 30vw;
+	background: url("../img2/花纹 2.png") no-repeat;
+	background-size: 100% 100%;
+	margin-left: 72vw;
+}
+.img2 {
+	width: 41.5vw;
+	height: 26vw;
+	background: url("../img2/花纹 2.png") no-repeat;
+	background-size: 100% 100%;
+	margin-left: 26vw;
+}
+.img3 {
+	width: 27vw;
+	height: 41.5vw;
+	background: url("../img2/花纹 2.png") no-repeat;
+	background-size: 100% 100%;
+
+}
+/*底部样式*/
+.col-md-5 ul{
+	font-family: "华文新魏";
+	font-size: 1.5vw;
+}
+.col-md-5 ul a{
+	color: rgba(207,169,114,0.5);
+}
+.col-md-6 ul{
+	font-family: "华文新魏";
+	font-size: 1.5vw;
+}
+.col-md-6 ul a{
+	color: rgba(207,169,114,0.5);
+}
+/*文字花纹顶部样式*/
+.header-border img{
+	width: 16vw;
+	height: 2vw;
+	margin-left: 9vw;
+	margin-bottom: 1vw
+}
+.header-border2 img{
+	width: 16vw;
+	height: 2vw;
+	margin-left: 4.5vw;
+	margin-bottom: 1vw;
+}
+.header-border3 img{
+	width: 16vw;
+	height: 2vw;
+	margin-left: 8.5vw;
+	margin-bottom: 2vw;
+	margin-top: 2vw;
+}
+/*图片样式*/
+.img-content img{
+	width: 100%;
+	height: auto;
+}

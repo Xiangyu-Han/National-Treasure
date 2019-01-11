@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>国家宝藏-文物页面</title>
+    <link href="妇好鸮尊.css" rel="stylesheet" media="screen">
+    <link href="css8/bootstrap.min.css" rel="stylesheet" media="screen">
+    <script type="text/javascript" src="jquery8/jquery.js"></script>
+    <script src="js8/bootstrap.min.js"></script>
+</head>
+<body class="a">
+<!--头部-->
+<div class="b">
+    <img src="img妇好鸮尊/banner.jpg" alt="张国立" style="height: auto;width: 98.9vw;">
+    <div id="header">
+        <div class="btn-group" id="user">
+            <a href=""><button type="button" class="btn btn-link" style="font-size: 1.3vw;width: 14vw">昵称<p id="user_name"></p></button></a>
+        </div>
+        <div class="btn-group" style="margin-left: 6vw">
+            <a href="shouye.html"><button type="button" class="btn btn-link">国家宝藏</button></a>
+        </div>
+        <div class="btn-group" >
+            <a href="museum.html"><button type="button" class="btn btn-link">博览群馆</button></a>
+        </div>
+        <div class="btn-group" >
+            <a href="wwzs.html"><button type="button" class="btn btn-link">文物之声</button></a>
+        </div>
+        <div class="btn-group" >
+            <a href="shipin.html"><button type="button" class="btn btn-link">系列视频</button></a>
+        </div>
+        <div class="btn-group" >
+            <a href="about.html"><button type="button" class="btn btn-link">关于我们</button></a>
+        </div>
+    </div>
+  <!--主体-->
+    <div><img src="img妇好鸮尊/1.jpg" class="picture1" alt="妇好鸮尊" /></div>
+    <div><img src="img妇好鸮尊/2.jpg" class="picture2" alt="妇好鸮尊2" /></div>
+    <div class="wenben1">1976年出土于河南安阳殷墟妇好墓，为商代晚期酒器，通高45. 9厘米，口长16.4 厘米，是目前中国发现最早的鸟形铜尊。器物造型生动、纹饰繁缛，把现实生活写照与艺术夸张巧妙结合，蕴含着先民丰富的想象力和艺术创造力，反映出商代晚期浓厚的宗教情感和庄严疗厉的审美观念。器口内壁铸造的“妇好”铭文可以确定，该尊是商王武丁配偶妇好的用器。</div>
+    <div><img src="img妇好鸮尊/3.jpg" class="picture3" alt="妇好鸮尊3" /></div>
+    <div><img src="img妇好鸮尊/4.jpg" class="picture4" alt="妇好鸮尊4" /></div>
+    <div class="wenben2"><h1 style="text-indent:3em;">妇好鸮尊</h1>“超可爱又超凶！！！”<br>再跟我念一遍，超可爱又超凶！！！<br>虽然很可爱！但其实是酒器！<br>原型是战神的图腾！！！！<br>长年携带酒心巧克力。</div>
+</div>
+<!--页脚-->
+<div class="footer">
+    <div class="footer2">
+        <a href="#" class="FontColor2">意见反馈</a><br>
+        <a href="#" class="FontColor2">账号申诉</a><br>
+        <a href="#" class="FontColor2">智能咨询</a><br>
+    </div>
+    <div class="footer3">
+        <a href="#" class="FontColor2">常见问题</a><br>
+        <a href="#" class="FontColor2">加入我们</a><br>
+        <a href="#" class="FontColor2">在线留言</a><br>
+    </div>
+</div>
+
+<script src="js/jquery.min.js?v=2.1.4"></script>
+    <script src="js/jquery.cookie.js"></script>    
+    <script type="text/javascript">
+    $(document).ready(function(){
+         var name = $.cookie("uName");
+         console.log(name);
+        if((name != null)){
+              $("#user_name").empty();
+              $("#user_name").append(name);
+        }
+    });
+</script>
+
+</body>
+</html>

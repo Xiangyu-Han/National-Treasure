@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>国家宝藏-文物页面</title>
+    <link href="宁波”万工轿“.css" rel="stylesheet" media="screen">
+    <link href="css8/bootstrap.min.css" rel="stylesheet" media="screen">
+    <script type="text/javascript" src="jquery8/jquery.js"></script>
+    <script src="js8/bootstrap.min.js"></script>
+</head>
+<body class="a">
+<!--头部-->
+<div class="b">
+    <img src="img宁波”万工轿“/banner.jpg" alt="张国立" style="height: auto;width: 98.9vw;">
+    <div id="header">
+        <div class="btn-group" id="user">
+            <a href=""><button type="button" class="btn btn-link" style="font-size: 1.3vw;width: 14vw">昵称<p id="user_name"></p></button></a>
+        </div>
+        <div class="btn-group" style="margin-left: 6vw">
+            <a href="shouye.html"><button type="button" class="btn btn-link">国家宝藏</button></a>
+        </div>
+        <div class="btn-group" >
+            <a href="museum.html"><button type="button" class="btn btn-link">博览群馆</button></a>
+        </div>
+        <div class="btn-group" >
+            <a href="wwzs.html"><button type="button" class="btn btn-link">文物之声</button></a>
+        </div>
+        <div class="btn-group" >
+            <a href="shipin.html"><button type="button" class="btn btn-link">系列视频</button></a>
+        </div>
+        <div class="btn-group" >
+            <a href="about.html"><button type="button" class="btn btn-link">关于我们</button></a>
+        </div>
+    </div>
+  <!--主体-->
+    <div><img src="img宁波”万工轿“/1.jpg" class="picture1" alt="骨笛" /></div>
+    <div><img src="img宁波”万工轿“/2.jpg" class="picture2" alt="骨笛2" /></div>
+    <div class="wenben1">为清末民初朱金木雕最杰出的作品，通高275厘米，长150厘米，宽90厘米，轿上圆雕或浮雅数百个人物和花鸟虫兽，表现天官赐福、八仙过海等故事场景，配以彩绘镜片玻璃、宁波金银彩绣轿衣和各色小宫灯，利用榫卯技术制作，需花费一万余工时，是当时彩结费器店用于出租的头等轿，也是现存最豪华的一顶花轿。</div>
+    <div><img src="img宁波”万工轿“/3.jpg" class="picture3" alt="骨笛3" /></div>
+    <div><img src="img宁波”万工轿“/4.jpg" class="picture4" alt="骨笛4" /></div>
+    <div><img src="img宁波”万工轿“/5.jpg" class="picture5" alt="骨笛5" /></div>
+</div>
+<!--页脚-->
+<div class="footer">
+    <div class="footer2">
+        <a href="#" class="FontColor2">意见反馈</a><br>
+        <a href="#" class="FontColor2">账号申诉</a><br>
+        <a href="#" class="FontColor2">智能咨询</a><br>
+    </div>
+    <div class="footer3">
+        <a href="#" class="FontColor2">常见问题</a><br>
+        <a href="#" class="FontColor2">加入我们</a><br>
+        <a href="#" class="FontColor2">在线留言</a><br>
+    </div>
+</div>
+
+<script src="js/jquery.min.js?v=2.1.4"></script>
+<script src="js/jquery.cookie.js"></script>
+<script type="text/javascript">
+    $(document).ready(function(){
+        var name = $.cookie("uName");
+        console.log(name);
+        if((name != null)){
+            $("#user_name").empty();
+            $("#user_name").append(name);
+        }
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>国家宝藏-文物页面</title>
+    <link href="大克鼎.css" rel="stylesheet" media="screen">
+    <link href="css8/bootstrap.min.css" rel="stylesheet" media="screen">
+    <script type="text/javascript" src="jquery8/jquery.js"></script>
+    <script src="js8/bootstrap.min.js"></script>
+</head>
+<body class="a">
+<!--头部-->
+<div class="b">
+    <img src="img大克鼎/banner.jpg" alt="张国立" style="height: auto;width: 98.9vw;">
+    <div id="header">
+        <div class="btn-group" id="user">
+            <a href=""><button type="button" class="btn btn-link" style="font-size: 1.3vw;width: 14vw">昵称<p id="user_name"></p></button></a>
+        </div>
+        <div class="btn-group" style="margin-left: 6vw">
+            <a href="shouye.html"><button type="button" class="btn btn-link">国家宝藏</button></a>
+        </div>
+        <div class="btn-group" >
+            <a href="museum.html"><button type="button" class="btn btn-link">博览群馆</button></a>
+        </div>
+        <div class="btn-group" >
+            <a href="wwzs.html"><button type="button" class="btn btn-link">文物之声</button></a>
+        </div>
+        <div class="btn-group" >
+            <a href="shipin.html"><button type="button" class="btn btn-link">系列视频</button></a>
+        </div>
+        <div class="btn-group" >
+            <a href="about.html"><button type="button" class="btn btn-link">关于我们</button></a>
+        </div>
+    </div>
+  <!--主体-->
+    <div><img src="img大克鼎/1.jpg" class="picture1" alt="大克鼎" /></div>
+    <div><img src="img大克鼎/2.jpg" class="picture2" alt="大克鼎2" /></div>
+    <div class="wenben1">高93.1厘米，重201.5千克，清光绪年间出土于陕西扶风县宾藏，为西周孝王时器物。鼎身有铭文290字，铭文分为两个部分:一为克对祖父功绩的追述，为周王对克赏赐的记载，包括赏赐的礼服及大量土地、人民。除了大克鼎以外，还有小克鼎七件，用来盛放肉食等祭视品。作为膳夫，克却能享受诸侯级别的列鼎，可见其极受周王器重。大克鼎采用大量变形纹饰，颈部兽面纹仅保留脸部轮廊线条和眼睛，称“变形兽面纹”;腹部波曲纹极具节奏感和的律感，又称“环带纹”。大克鼎是青铜转变期的代表，与大盂鼎、毛公鼎并称“海内三宝”。</div>
+    <div><img src="img大克鼎/3.jpg" class="picture3" alt="大克鼎3" /></div>
+    <div><img src="img大克鼎/4.jpg" class="picture4" alt="大克鼎4" /></div>
+    <div class="wenben2"><h1 style="text-indent:5.5em;">大克鼎</h1>鼎上的文案记载了名为克的贵族的家族的事迹。出土以后战乱中被潘家保护。1952年捐赠于上博，成为了上博的logo。深受潘家的精神触动，把上博的所有文物都看做家人并想保护他们。认识上博所有的文物。平时沉稳庄重，但偶尔也会有老人家的絮叨。鼎是煮肉盛肉的容器。做的一手好菜，拿手菜是红烧肉。 在他做饭的时候，腿上的花纹偶尔会消失，然后出现自称饕餮的狗。</div>
+</div>
+<!--页脚-->
+<div class="footer">
+    <div class="footer2">
+        <a href="#" class="FontColor2">意见反馈</a><br>
+        <a href="#" class="FontColor2">账号申诉</a><br>
+        <a href="#" class="FontColor2">智能咨询</a><br>
+    </div>
+    <div class="footer3">
+        <a href="#" class="FontColor2">常见问题</a><br>
+        <a href="#" class="FontColor2">加入我们</a><br>
+        <a href="#" class="FontColor2">在线留言</a><br>
+    </div>
+</div>
+
+<script src="js/jquery.min.js?v=2.1.4"></script>
+    <script src="js/jquery.cookie.js"></script>    
+    <script type="text/javascript">
+    $(document).ready(function(){
+         var name = $.cookie("uName");
+         console.log(name);
+        if((name != null)){
+              $("#user_name").empty();
+              $("#user_name").append(name);
+        }
+    });
+</script>
+
+</body>
+</html>

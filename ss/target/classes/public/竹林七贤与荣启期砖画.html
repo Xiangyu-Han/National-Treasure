@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>国家宝藏-文物页面</title>
+    <link href="竹林七贤与荣启期砖画.css" rel="stylesheet" media="screen">
+    <link href="css8/bootstrap.min.css" rel="stylesheet" media="screen">
+    <script type="text/javascript" src="jquery8/jquery.js"></script>
+    <script src="js8/bootstrap.min.js"></script>
+</head>
+<body class="a">
+<!--头部-->
+<div class="b">
+    <img src="img竹林七贤与荣启期砖画/banner.jpg" alt="张国立" style="height: auto;width: 98.9vw;">
+    <div id="header">
+        <div class="btn-group" id="user">
+            <a href=""><button type="button" class="btn btn-link" style="font-size: 1.3vw;width: 14vw">昵称<p id="user_name"></p></button></a>
+        </div>
+        <div class="btn-group" style="margin-left: 6vw">
+            <a href="shouye.html"><button type="button" class="btn btn-link">国家宝藏</button></a>
+        </div>
+        <div class="btn-group" >
+            <a href="museum.html"><button type="button" class="btn btn-link">博览群馆</button></a>
+        </div>
+        <div class="btn-group" >
+            <a href="wwzs.html"><button type="button" class="btn btn-link">文物之声</button></a>
+        </div>
+        <div class="btn-group" >
+            <a href="shipin.html"><button type="button" class="btn btn-link">系列视频</button></a>
+        </div>
+        <div class="btn-group" >
+            <a href="about.html"><button type="button" class="btn btn-link">关于我们</button></a>
+        </div>
+    </div>
+  <!--主体-->
+    <div><img src="img竹林七贤与荣启期砖画/1.jpg" class="picture1" alt="竹林七贤与荣启期砖画" /></div>
+    <div><img src="img竹林七贤与荣启期砖画/2.jpg" class="picture2" alt="竹林七贤与荣启期砖画2" /></div>
+    <div class="wenben1">1960年发现于南京西善桥宫山北麓座帝王陵中，时代为东晋至南朝宋，砖画分布在墓室的南北两壁，由三百余枚砖块拼嵌而成，长2.4米、高0. 88米，是同类砖画中规模最大、内涵最为丰富、保存最为完好的一件，也是我国迄今为止发现的最早的六朝人物画实物，在中国美术史上具有重要地位。画面展现了魏晋名上竹林七贤和春秋隐土荣启期的人物形象，反映了当时高土贤人“隐逸清高”的风尚。</div>
+    <div><img src="img竹林七贤与荣启期砖画/3.jpg" class="picture3" alt="竹林七贤与荣启期砖画3" /></div>
+    <div><img src="img竹林七贤与荣启期砖画/4.jpg" class="picture4" alt="竹林七贤与荣启期砖画4" /></div>
+    <div class="wenben2"><h1 style="text-indent:1em;">竹林七贤与荣启期砖画</h1>“我和那群所谓放浪形骸的家伙可不一样!我很爱惜自己的!”“他们不知道是误会了什么，老以为我是他们的仆人，整天叫我做这做那的，开什么玩笑!没我怎么有他们!”“你看这扫把，是我用松树...不对!总之又要照顾他们又要小心注意别让他们惹事真的很累了!你们真的喜欢这些家伙吗!”“.......其实，很累的时候....倒还真的挺羡慕他们这样的.....”“......什么我说出声了吗!?!?”</div>
+</div>
+<!--页脚-->
+<div class="footer">
+    <div class="footer2">
+        <a href="#" class="FontColor2">意见反馈</a><br>
+        <a href="#" class="FontColor2">账号申诉</a><br>
+        <a href="#" class="FontColor2">智能咨询</a><br>
+    </div>
+    <div class="footer3">
+        <a href="#" class="FontColor2">常见问题</a><br>
+        <a href="#" class="FontColor2">加入我们</a><br>
+        <a href="#" class="FontColor2">在线留言</a><br>
+    </div>
+</div>
+<script src="js/jquery.min.js?v=2.1.4"></script>
+<script src="js/jquery.cookie.js"></script>
+<script type="text/javascript">
+    $(document).ready(function(){
+        var name = $.cookie("uName");
+        console.log(name);
+        if((name != null)){
+            $("#user_name").empty();
+            $("#user_name").append(name);
+        }
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ss.vv.ss.mapper.ICulturalMapper">
+	<resultMap id="baseResultMap" type="com.ss.vv.ss.domain.Cultural">
+		<id column="cultural_id" jdbcType="INTEGER" property="cId" />
+		<result column="cultural_name" jdbcType="CHAR" property="cName" />
+		<result column="cultural_picture" jdbcType="CHAR" property="cPicture" />
+		<result column="cultural_url" jdbcType="CHAR" property="cUrl" />
+		<result column="cultural_dynasty" jdbcType="CHAR" property="cDynasty" />
+		<result column="cultural_category" jdbcType="CHAR" property="cCategory" />
+		<result column="cultural_area" jdbcType="CHAR" property="cArea" />
+	</resultMap>
+	<sql id="baseColumnList">
+cultural_id,cultural_name,cultural_picture,cultural_url,cultural_dynasty,cultural_category,cultural_area	</sql>
+	<sql id="voColumnList">
+cultural_id,cultural_name,cultural_picture,cultural_url,cultural_dynasty,cultural_category,cultural_area	</sql>
+		<insert id="insert" useGeneratedKeys="true" keyProperty="entity.cId">
+		INSERT INTO ${tableName} (
+		cultural_id,cultural_name,cultural_picture,cultural_url,cultural_dynasty,cultural_category,cultural_area
+		) VALUES (
+		#{entity.cId},#{entity.cName}, #{entity.cPicture}, #{entity.cUrl},#{entity.cDynasty},#{entity.cCategory},#{entity.cArea} 
+		)	</insert>
+		<insert id="insertByBatch" parameterType="java.util.List">
+		INSERT INTO ${tableName} (
+		cultural_id,cultural_name,cultural_picture,cultural_url,cultural_dynasty,cultural_category,cultural_area
+		) VALUES 
+		<foreach collection="list" item="entity" index="index" separator=",">
+			(#{entity.cId},#{entity.cName}, #{entity.cPicture}, #{entity.cUrl},#{entity.cDynasty},#{entity.cCategory},#{entity.cArea})
+		</foreach>
+	</insert>
+	
+	
+		<update id="update">
+		UPDATE ${tableName} SET 
+		cultural_name=#{entity.cName}, cultural_picture=#{entity.cPicture}, cultural_url=#{entity.cUrl},cultural_dynasty=#{entity.cDynasty},cultural_category=#{entity.cCategory},cultural_area=#{entity.cArea}
+		 WHERE 
+		cultural_id = #{entity.cId}
+	</update>
+	
+	
+	<select id="getById" parameterType="java.lang.Integer" resultMap="baseResultMap">
+		select
+		<include refid="voColumnList" />
+		from ${tableName} 
+		where cultural_id = #{id}
+	</select>
+	
+	<select id="getByDynasty" parameterType="String" resultMap="baseResultMap">
+		select
+		<include refid="voColumnList" />
+		from cultural 
+		where cultural_dynasty = #{cDynasty}
+	</select>
+	
+	<select id="getByCategory" parameterType="String" resultMap="baseResultMap">
+		select
+		<include refid="voColumnList" />
+		from cultural 
+		where cultural_category = #{cCategory}
+	</select>
+	<select id="getByArea" parameterType="String" resultMap="baseResultMap">
+		select
+		<include refid="voColumnList" />
+		from cultural
+		where cultural_area =  #{cArea} 
+	</select>
+	<select id="getBySearch" parameterType="String" resultMap="baseResultMap">
+		select
+		<include refid="voColumnList" />
+		from cultural
+		where cultural_name like '%${search}%'
+	</select>
+	
+	
+	
+	
+	<select id="getOne" parameterType="java.util.Map" resultMap="baseResultMap">
+		select
+		<if test="field == null">
+			<include refid="voColumnList" />
+		</if>
+		<if test="field != null">
+			${field}
+		</if>
+		from ${tableName} 
+		<where>
+			<foreach collection="condition" index="key" item="value">
+				${value} ${key}
+			</foreach>
+		</where>
+		limit 1;
+	</select>
+	<select id="getCount" parameterType="java.util.Map" resultType="java.lang.Integer">
+		select
+		count(cultural_id)
+		from ${tableName} 
+		<where>
+			<foreach collection="condition" index="key" item="value">
+				${value} ${key}
+			</foreach>
+		</where>
+	</select>
+	<!-- 这部分为根据传递参数，自动生成SQL -->
+	<select id="getList" parameterType="java.util.Map" resultMap="baseResultMap">
+		select
+		   *
+		from ${tableName} 
+		order by ${order}
+		limit ${offset}, ${limit}
+	</select>
+	<!-- 判断表格是否存在，如果不存在可以配合createTable使用，用于动态创建表格 -->
+	<select id="existTable" parameterType="String" resultType="java.lang.Integer">
+		select count(table_name) from information_schema.TABLES WHERE table_name=#{tableName} ;
+	</select>
+	<update id="createTable" parameterType="String">
+		<!-- 这里是创建表格的SQL，复制过来，表名作为参数传递 -->
+		<!-- create table ${tableName} (   //  表名要这样写 -->
+	</update>
+	<cache />
+</mapper>

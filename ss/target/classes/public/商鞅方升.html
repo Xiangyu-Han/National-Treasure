@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>国家宝藏-文物页面</title>
+    <link href="商鞅方升.css" rel="stylesheet" media="screen">
+    <link href="css8/bootstrap.min.css" rel="stylesheet" media="screen">
+    <script type="text/javascript" src="jquery8/jquery.js"></script>
+    <script src="js8/bootstrap.min.js"></script>
+</head>
+<body class="a">
+<!--头部-->
+<div class="b">
+    <img src="img商鞅方升/banner.jpg" alt="张国立" style="height: auto;width: 98.9vw;">
+    <div id="header">
+        <div class="btn-group" id="user">
+            <a href=""><button type="button" class="btn btn-link" style="font-size: 1.3vw;width: 14vw">昵称<p id="user_name"></p></button></a>
+        </div>
+        <div class="btn-group" style="margin-left: 6vw">
+            <a href="shouye.html"><button type="button" class="btn btn-link">国家宝藏</button></a>
+        </div>
+        <div class="btn-group" >
+            <a href="museum.html"><button type="button" class="btn btn-link">博览群馆</button></a>
+        </div>
+        <div class="btn-group" >
+            <a href="wwzs.html"><button type="button" class="btn btn-link">文物之声</button></a>
+        </div>
+        <div class="btn-group" >
+            <a href="shipin.html"><button type="button" class="btn btn-link">系列视频</button></a>
+        </div>
+        <div class="btn-group" >
+            <a href="about.html"><button type="button" class="btn btn-link">关于我们</button></a>
+        </div>
+    </div>
+
+  <!--主体-->
+    <div><img src="img商鞅方升/1.jpg" class="picture1" alt="商鞅方升" /></div>
+    <div><img src="img商鞅方升/2.jpg" class="picture2" alt="商鞅方升2" /></div>
+    <div class="wenben1">高2.32厘米，通长18. 7厘米，容积202. 15毫升。器壁三面及底部均刻铭文，其中左壁刻:“十八年， 齐遣卿大夫众来聘，冬十二月乙西，大良造鞭，爱积十六尊(寸)五分享(寸)壹为升”。底部刻秦始皇二十六年诏书:什六年，皇帝尽并兼天下诸侯，黔首大安，立号为皇帝，乃诏承相状、馆，法度量则不壹歌疑者，皆明壹之”。铭文中的十八年，即泰老公十八年(公元前344年)。此器是商鞅任“大良造”时所颁发的标准量器。方升底部加刻秦始皇二十六年诏书证明秦始皇统一中国后，仍以商鞅所规定的制度和标准统一全国的度量衡。作为量器，它的容积是商鞅统度量衡所规定的标准“1升”，是商鞅变法目前为止唯一实物例证。</div>
+    <div><img src="img商鞅方升/3.jpg" class="picture3" alt="商鞅方升3" /></div>
+    <div><img src="img商鞅方升/4.jpg" class="picture4" alt="商鞅方升4" /></div>
+    <div class="wenben2"><h1 style="text-indent:3.5em;">商鞅方升</h1>行为处事.......或者说基本干什么对别人对自己都十分严格。......基本到了强迫症的地步呢。是看起来有点可怕,实际上超可怕的人。跟秦律法一样可怕。掌管税收粮食的统计,记录工作十分辛苦,在任的120年里成功练成了篆刻大师。</div>
+</div>
+<!--页脚-->
+<div class="footer">
+    <div class="footer2">
+        <a href="#" class="FontColor2">意见反馈</a><br>
+        <a href="#" class="FontColor2">账号申诉</a><br>
+        <a href="#" class="FontColor2">智能咨询</a><br>
+    </div>
+    <div class="footer3">
+        <a href="#" class="FontColor2">常见问题</a><br>
+        <a href="#" class="FontColor2">加入我们</a><br>
+        <a href="#" class="FontColor2">在线留言</a><br>
+    </div>
+</div>
+
+<script src="js/jquery.min.js?v=2.1.4"></script>
+<script src="js/jquery.cookie.js"></script>
+<script type="text/javascript">
+    $(document).ready(function(){
+        var name = $.cookie("uName");
+        console.log(name);
+        if((name != null)){
+            $("#user_name").empty();
+            $("#user_name").append(name);
+        }
+    });
+</script>
+</body>
+</html>

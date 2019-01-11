@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>国家宝藏-文物页面</title>
+    <link href="朱克柔缂丝莲塘乳鸭图.css" rel="stylesheet" media="screen">
+    <link href="css8/bootstrap.min.css" rel="stylesheet" media="screen">
+    <script type="text/javascript" src="jquery8/jquery.js"></script>
+    <script src="js8/bootstrap.min.js"></script>
+</head>
+<body class="a">
+<!--头部-->
+<div class="b">
+    <img src="img朱克柔缂丝莲塘乳鸭图/banner.jpg" alt="张国立" style="height: auto;width: 98.9vw;">
+    <div id="header">
+        <div class="btn-group" id="user">
+            <a href=""><button type="button" class="btn btn-link" style="font-size: 1.3vw;width: 14vw">昵称<p id="user_name"></p></button></a>
+        </div>
+        <div class="btn-group" style="margin-left: 6vw">
+            <a href="shouye.html"><button type="button" class="btn btn-link">国家宝藏</button></a>
+        </div>
+        <div class="btn-group" >
+            <a href="museum.html"><button type="button" class="btn btn-link">博览群馆</button></a>
+        </div>
+        <div class="btn-group" >
+            <a href="wwzs.html"><button type="button" class="btn btn-link">文物之声</button></a>
+        </div>
+        <div class="btn-group" >
+            <a href="shipin.html"><button type="button" class="btn btn-link">系列视频</button></a>
+        </div>
+        <div class="btn-group" >
+            <a href="about.html"><button type="button" class="btn btn-link">关于我们</button></a>
+        </div>
+    </div>
+  <!--主体-->
+    <div><img src="img朱克柔缂丝莲塘乳鸭图/1.jpg" class="picture1" alt="朱克柔缂丝莲塘乳鸭图" /></div>
+    <div><img src="img朱克柔缂丝莲塘乳鸭图/2.jpg" class="picture2" alt="朱克柔缂丝莲塘乳鸭图2" /></div>
+    <div class="wenben1">纵107.5厘米，横108. 8厘米。此件文物为南宋朱克柔的传世之作。整幅图案以彩色纬线绳织面成。图中双鸭浮游于萍草间，尾有乳鸭相随，旁有白鹭一对。翠鸟、红蜻蜓点缴其间。坡岸青石，质感凝重。周围白策、慈菇、荷花、壹草、芙蓉等花草环绕，色彩雅丽，线条精谨，具有春夏池塘的白然生趣，俨然院体风格。青色湖石上缂织“江东朱刚制莲塘乳鸭图”款，“克柔”朱文印。朱刚，字克柔，女，华亭县(今上海松江)人。以缂丝作品著名，所作树石、花鸟均极精巧，其以丝线调色如运笔作画，作品“古澹清雅，为时之绝技”。此缂丝画幅极大，色彩丰富，丝缕细密适宜，层次分明，是迄今为止现存宋代缂丝作品中最大的杰作。</div>
+    <div><img src="img朱克柔缂丝莲塘乳鸭图/3.jpg" class="picture3" alt="朱克柔缂丝莲塘乳鸭图3" /></div>
+    <div><img src="img朱克柔缂丝莲塘乳鸭图/4.jpg" class="picture4" alt="朱克柔缂丝莲塘乳鸭图4" /></div>
+    <div class="wenben2"><h1 style="text-indent:1em;">朱克柔缂丝莲塘乳鸭图</h1>制作的过程相当耗费心力，成品的美貌相当震撼惊人，但作者朱克柔却没留下什么记载。导致她也不太会用言语表达自己。在湖边可能看到她，用快乐的目光看着湖边的草木和生物，但开口向她搭话的话，她会吓一跳。身上带着一些缂丝的梭子。可能是想送给你。好像很喜欢小动物。</div>
+</div>
+<!--页脚-->
+<div class="footer">
+    <div class="footer2">
+        <a href="#" class="FontColor2">意见反馈</a><br>
+        <a href="#" class="FontColor2">账号申诉</a><br>
+        <a href="#" class="FontColor2">智能咨询</a><br>
+    </div>
+    <div class="footer3">
+        <a href="#" class="FontColor2">常见问题</a><br>
+        <a href="#" class="FontColor2">加入我们</a><br>
+        <a href="#" class="FontColor2">在线留言</a><br>
+    </div>
+</div>
+<script src="js/jquery.min.js?v=2.1.4"></script>
+<script src="js/jquery.cookie.js"></script>
+<script type="text/javascript">
+    $(document).ready(function(){
+        var name = $.cookie("uName");
+        console.log(name);
+        if((name != null)){
+            $("#user_name").empty();
+            $("#user_name").append(name);
+        }
+    });
+</script>
+</body>
+</html>

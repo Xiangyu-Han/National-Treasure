@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<h3 th:text="登录成功"></h3><a href="/logout">注销</a>
+
+<script src="js/jquery.min.js?v=2.1.4"></script>
+<script src="js/jquery.cookie.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	  var name = $.cookie("uName");
+	  console.log(name);
+	  });
+</script>
+</body>
+</html>

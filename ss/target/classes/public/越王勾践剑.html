@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>国家宝藏-文物页面</title>
+    <link href="css8/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="越王勾践剑.css" rel="stylesheet" media="screen">
+    <script type="text/javascript" src="jquery8/jquery.js"></script>
+    <script src="js8/bootstrap.min.js"></script>
+</head>
+<body class="a">
+<!--头部-->
+<div class="b">
+    <img src="img越王勾践剑/banner.jpg" alt="张国立" style="height: auto;width: 98.9vw;">
+    <div id="header">
+        <div class="btn-group" id="user">
+            <a href=""><button type="button" class="btn btn-link" style="font-size: 1.3vw;width: 14vw">昵称<p id="user_name"></p></button></a>
+        </div>
+        <div class="btn-group" style="margin-left: 6vw">
+            <a href="shouye.html"><button type="button" class="btn btn-link">国家宝藏</button></a>
+        </div>
+        <div class="btn-group" >
+            <a href="museum.html"><button type="button" class="btn btn-link">博览群馆</button></a>
+        </div>
+        <div class="btn-group" >
+            <a href="wwzs.html"><button type="button" class="btn btn-link">文物之声</button></a>
+        </div>
+        <div class="btn-group" >
+            <a href="shipin.html"><button type="button" class="btn btn-link">系列视频</button></a>
+        </div>
+        <div class="btn-group" >
+            <a href="about.html"><button type="button" class="btn btn-link">关于我们</button></a>
+        </div>
+    </div>
+  <!--主体-->
+    <div><img src="img越王勾践剑/1.jpg" class="picture1" alt="越王勾践剑" /></div>
+    <div><img src="img越王勾践剑/2.jpg" class="picture2" alt="越王勾践剑2" /></div>
+    <div class="wenben1">越王勾践剑，春秋晚期越国青铜器，国家一级文物，1965年冬天出土于湖北省荆州市江陵县望山楚墓群中。因剑身上被镀上了一层含铬的金属而千年不锈。经无损科学检测，其主要合金成分为铜、锡、铅、铁、硫等。花纹处含硫高，因硫化铜可防锈。<br>&nbsp;&nbsp;&nbsp;&nbsp;这把青铜剑出土时，置于棺内人骨架的左侧，并插入涂黑漆的木鞘内。剑长55.6厘米，剑形挺拔庄重，制作精良考究，保存完好如新；剑身上面满饰黑色菱形暗纹，剑格的一面由绿松石组成美丽的图案，另一面则镶嵌着蓝色琉璃，整个装饰显得华贵、典雅。靠近剑格处有两行错金鸟铭文，铭文为“越王勾践，自作用剑”。剑柄以丝缠绕，剑出鞘时寒光凛凛，耀人眼目，剑刃薄而锋利。</div>
+    <div><img src="img越王勾践剑/3.jpg" class="picture3" alt="越王勾践剑3" /></div>
+    <div><img src="img越王勾践剑/4.jpg" class="picture4" alt="越王勾践剑4" /></div>
+    <div class="wenben2"><h1 style="text-indent:3.5em;">越王勾践剑</h1>越王勾践剑，属青铜剑，制作精美。剑长55.7厘米，柄长8.4厘米，剑宽 4.6厘米，剑首外翻卷成圆箍形，内铸有间隔只有0.2毫米的11道同心圆，剑身上布满了规则的黑色菱形暗格花纹，剑格正面镶有蓝色玻璃，背面镶有绿松石。 剑身修长，有中脊，两从刃锋利，前锋曲弧内凹。茎上两道凸箍，圆首饰同心圆纹。</div>
+</div>
+<!--页脚-->
+<div class="footer">
+    <div class="footer2">
+        <a href="#" class="FontColor2">意见反馈</a><br>
+        <a href="#" class="FontColor2">账号申诉</a><br>
+        <a href="#" class="FontColor2">智能咨询</a><br>
+    </div>
+    <div class="footer3">
+        <a href="#" class="FontColor2">常见问题</a><br>
+        <a href="#" class="FontColor2">加入我们</a><br>
+        <a href="#" class="FontColor2">在线留言</a><br>
+    </div>
+</div>
+<script src="js/jquery.min.js?v=2.1.4"></script>
+<script src="js/jquery.cookie.js"></script>
+<script type="text/javascript">
+    $(document).ready(function(){
+        var name = $.cookie("uName");
+        console.log(name);
+        if((name != null)){
+            $("#user_name").empty();
+            $("#user_name").append(name);
+        }
+    });
+</script>
+</body>
+</html>

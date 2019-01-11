@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>国家宝藏-文物页面</title>
+    <link href="杜虎符.css" rel="stylesheet" media="screen">
+    <link href="css8/bootstrap.min.css" rel="stylesheet" media="screen">
+    <script type="text/javascript" src="jquery8/jquery.js"></script>
+    <script src="js8/bootstrap.min.js"></script>
+</head>
+<body class="a">
+<!--头部-->
+<div class="b">
+    <img src="img杜虎符/banner.jpg" alt="张国立" style="height: auto;width: 98.9vw;">
+    <div id="header">
+        <div class="btn-group" id="user">
+            <a href=""><button type="button" class="btn btn-link" style="font-size: 1.3vw;width: 14vw">昵称<p id="user_name"></p></button></a>
+        </div>
+        <div class="btn-group" style="margin-left: 6vw">
+            <a href="shouye.html"><button type="button" class="btn btn-link">国家宝藏</button></a>
+        </div>
+        <div class="btn-group" >
+            <a href="museum.html"><button type="button" class="btn btn-link">博览群馆</button></a>
+        </div>
+        <div class="btn-group" >
+            <a href="wwzs.html"><button type="button" class="btn btn-link">文物之声</button></a>
+        </div>
+        <div class="btn-group" >
+            <a href="shipin.html"><button type="button" class="btn btn-link">系列视频</button></a>
+        </div>
+        <div class="btn-group" >
+            <a href="about.html"><button type="button" class="btn btn-link">关于我们</button></a>
+        </div>
+    </div>
+  <!--主体-->
+    <div><img src="img杜虎符/1.jpg" class="picture1" alt="杜虎符" /></div>
+    <div><img src="img杜虎符/2.jpg" class="picture2" alt="杜虎符2" /></div>
+    <div class="wenben1">1973年被西安南郊杜城村民发现。长9.5厘米，高4.4厘米，厚0.7厘米，“符” 是中国古代常用的一种信物，一股分为两半，两半相合，就能作为办理某类事务的定约和践约的凭证，现代的“符合一词也由此而来。此件为虎符的左半符，虎作行走状，昂首，尾巴蜷曲。其上有错金小篆铭文9行共40字。若需调动50人以上兵力，须有能与此符相合的君王右半符。这反映了秦高度集中的军权以“右”为尊的习惯，且从记载可知战国时各国君主为把持军权都有类似做法。</div>
+    <div><img src="img杜虎符/3.jpg" class="picture3" alt="杜虎符3" /></div>
+    <div><img src="img杜虎符/4.jpg" class="picture4" alt="杜虎符4" /></div>
+    <div class="wenben2"><h1 style="text-indent:4.5em;">杜虎符</h1>虎符一家全是双胞胎，大多因为在不同的地方生活，所以基本.上性格爱好都相差很多。兄弟见面次数很少，不过不管过了多久都能一眼认出对方来。自己也不清楚谁是兄长，也许意外的在意,不过吵到打架还是不好的。</div>
+</div>
+<!--页脚-->
+<div class="footer">
+    <div class="footer2">
+        <a href="#" class="FontColor2">意见反馈</a><br>
+        <a href="#" class="FontColor2">账号申诉</a><br>
+        <a href="#" class="FontColor2">智能咨询</a><br>
+    </div>
+    <div class="footer3">
+        <a href="#" class="FontColor2">常见问题</a><br>
+        <a href="#" class="FontColor2">加入我们</a><br>
+        <a href="#" class="FontColor2">在线留言</a><br>
+    </div>
+</div>
+
+<script src="js/jquery.min.js?v=2.1.4"></script>
+    <script src="js/jquery.cookie.js"></script>    
+    <script type="text/javascript">
+    $(document).ready(function(){
+         var name = $.cookie("uName");
+         console.log(name);
+        if((name != null)){
+              $("#user_name").empty();
+              $("#user_name").append(name);
+        }
+    });
+</script>
+
+</body>
+</html>

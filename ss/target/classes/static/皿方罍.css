@@ -1,0 +1,119 @@
+/*背景样式*/
+.a{
+    width:98.9vw;
+    height:254vw;
+    background:url(img皿方罍/beijing.jpg);
+    background-size:98.9vw 254vw;
+    background-repeat:no-repeat;
+}
+/*body的大小*/
+.b{
+    width:98.9vw;
+    height:220vw;
+}
+/*头部按钮样式*/
+#header{
+    margin:2vw 3vw;
+}
+#header div{
+    margin-left: 2.5vw;
+    width: 13%;
+    height: 20%;
+    text-align: center;
+}
+#header div button{
+    background: rgba(207,169,114,0.5);
+    font-family:"华文新魏";
+    font-size: 2vw;
+    color: #bfad5a;
+    height: 4vw;
+    -webkit-border-radius: 15px;
+}
+/*body的内容布局*/
+.picture1{
+    width:17vw;
+    height:6.5vw;
+    margin-top: 0vw;
+    margin-left: 6.5vw;
+
+}
+.picture2{
+    width:14vw;
+    height:28vw;
+    margin-top: 5vw;
+    margin-left: 10vw;
+
+}
+.wenben1{
+    width:60vw;
+    height:28vw;
+    background-color:#1F1F27;
+    margin-top: -28vw;
+    margin-left: 28vw;
+    font-family:隶书;
+    font-size:1.8vw;
+    text-indent:2em;
+    line-height:3vw;
+    color:#BB9276;
+}
+.picture3{
+    width:76vw;
+    height:50vw;
+    margin-top: 6vw;
+    margin-left: 12vw;
+}
+.picture4{
+    width:36vw;
+    height:52vw;
+    margin-top: 5vw;
+    margin-left: 12vw;
+}
+.picture5{
+    width:36vw;
+    height:52vw;
+    margin-top: -53.5vw;
+    margin-left: 50vw;
+}
+.picture6{
+    width:30vw;
+    height:50vw;
+    margin-top: 5vh;
+    margin-left: 18vw;
+}
+.wenben2{
+    width:25vw;
+    height:35vw;
+    background-color:#1F1F27;
+    margin-top: -45vw;
+    margin-left: 55vw;
+    font-family:隶书;
+    text-indent:2em;
+    font-size:1.8vw;
+    line-height:3vw;
+    color:#BB9276;
+}
+/*页脚布局*/
+.footer{
+    width:98.9vw;
+    height:14.5vw;
+    margin-top:19.5vw;
+    background: url("img皿方罍/yejiao.png");
+    background-size:100vw 14.5vw;
+
+}
+.footer2{
+    padding-top: 6vw;
+    margin-left: 23vw;
+    font-family: 华文新魏;
+    font-size:1.8vw;
+}
+.footer3{
+    margin-top: -7.7vw;
+    margin-left: 67vw;
+    font-family: 华文新魏;
+    font-size:1.8vw;
+}
+/*超链接样式*/
+.FontColor2:link {color:#745A43}
+.FontColor2:visited {color:#745A43}
+.FontColor2:hover {color:#BFAD57}

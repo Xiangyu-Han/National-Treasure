@@ -1,0 +1,76 @@
+@charset "utf-8";
+.form{
+    border:0.01vw solid transparent;
+    width:100vw;
+    height:100vh;
+    background:url(../fonts1/beijing1.jpg);
+    background-size:100vw 100vh;
+    background-repeat:no-repeat;
+
+}
+
+.text1{
+
+    border:1px solid transparent;
+    font-family:楷体;
+    width:40vw;
+    height:65vh;
+    margin-left: 45vw;
+    margin-top: 22vh;
+
+}
+input::-webkit-input-placeholder {
+    /* placeholder字体大小  */
+    font-size: 2vh;
+    /* placeholder位置  */
+    text-align:left;
+}
+input:focus::-webkit-input-placeholder {
+    color: transparent;
+    /* transparent是全透明黑色(black)的速记法，即一个类似rgba(0,0,0,0)这样的值 */
+}
+.form-control{
+    margin-top:3.8vh;
+    height:4.55vh;
+    width: 18vw;
+    /*font-size: 2vh;*/
+}
+.tishi1{
+    float: left;
+    font-size: 2.2vh;
+}
+.tishi2{
+    float: left;
+    font-size: 2.2vh;
+}
+.tishi3{
+    float: left;
+    font-size: 2.2vh;
+}
+.tishi4{
+    float: left;
+    font-size: 2.2vh;
+}
+.bord{
+    border:0.1px solid transparent;
+    width: 18vw;
+    height:5vw;
+}
+.submit1{
+    margin-top:3.3vh;
+    margin-left: 3vw;
+    background:#4169E1;
+    border-width:0vh;
+    font-family:楷体;
+    font-size:1.2vw;
+    color:white;
+    border-radius:1vh;
+    width:10vw;
+    height:5vh
+}
+.d{
+    margin-top:-15vh;
+    margin-left: 37.6vw;
+    font-family:楷体;
+}
+a{ color:whitesmoke}

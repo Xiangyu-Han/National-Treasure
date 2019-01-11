@@ -1,0 +1,106 @@
+/*背景样式*/
+.a{
+    width:98.9vw;
+    height:190vw;
+    background:url(img长沙窑青釉褐彩诗文执壶/beijing.jpg);
+    background-size:98.9vw 190vw;
+}
+/*body的大小*/
+.b{
+    width:98.9vw;
+    height:160vw;
+}
+/*头部按钮样式*/
+#header{
+    margin:2vw 3vw;
+}
+#header div{
+    margin-left: 2.5vw;
+    width: 13%;
+    height: 20%;
+    text-align: center;
+}
+#header div button{
+    background: rgba(207,169,114,0.5);
+    font-family:"华文新魏";
+    font-size: 2vw;
+    color: #bfad5a;
+    height: 4vw;
+    -webkit-border-radius: 15px;
+}
+/*body的内容布局*/
+.picture1{
+    width:25vw;
+    height:auto;
+    margin-top: 3vw;
+    margin-left: 12vw;
+
+}
+.picture2{
+    width:15vw;
+    height:auto;
+    margin-top: 5vw;
+    margin-left: 17vw;
+
+}
+.wenben1{
+    width:48vw;
+    height:20vw;
+    background-color:#1F1F27;
+    margin-top: -24vw;
+    margin-left: 40vw;
+    font-family:隶书;
+    font-size:1.9vw;
+    line-height:3vw;
+    color:#BB9276;
+}
+.picture3{
+    width:76vw;
+    height:auto;
+    margin-top: 8vw;
+    margin-left: 12vw;
+}
+.picture4{
+    width:36vw;
+    height:auto;
+    margin-top: 5vw;
+    margin-left: 12vw;
+}
+.wenben2{
+    width:35vw;
+    height:20vw;
+    background-color:#1F1F27;
+    margin-top: -40vw;
+    margin-left: 53vw;
+    font-family:隶书;
+    text-indent:2em;
+    font-size:1.8vw;
+    line-height:3vw;
+    text-align:justify;
+    color:#BB9276;
+}
+/*页脚布局*/
+.footer{
+    width:98.9vw;
+    height:14.5vw;
+    margin-top:19.5vw;
+    background: url("img长沙窑青釉褐彩诗文执壶/yejiao.png");
+    background-size:100vw 14.5vw;
+
+}
+.footer2{
+    padding-top: 6vw;
+    margin-left: 23vw;
+    font-family: 华文新魏;
+    font-size:1.8vw;
+}
+.footer3{
+    margin-top: -7.7vw;
+    margin-left: 67vw;
+    font-family: 华文新魏;
+    font-size:1.8vw;
+}
+/*超链接样式*/
+.FontColor2:link {color:#745A43}
+.FontColor2:visited {color:#745A43}
+.FontColor2:hover {color:#BFAD57}

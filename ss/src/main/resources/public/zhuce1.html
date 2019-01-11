@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>国家宝藏-注册界面</title>
+    <link href="css1/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link rel="stylesheet" href="css1/bootstrap-select.min.css">
+    <link href="css1/css.css" rel="stylesheet" media="screen">
+</head>
+
+<body>
+<script src="jquery1/jquery.js"></script>
+<script src="js1/bootstrap.min.js"></script>
+<script src="js1/bootstrap-select.min.js"></script>
+<script src="js1/JS.js"></script>
+
+<form id="museum" role="form" action="/museum/user/addOrEditUser" method="post" >
+    <div class="form">
+
+    <div class="text1" >
+        <input type="text" class="form-control"   id="uId" name="uId" onKeyUp="namelength();value=value.replace(/[^\d]/g,'')" placeholder="请输入5-12位由数字组成的账号">
+        <div id="tishi1" class="tishi1"></div>
+        <input type="password" class="form-control" id="password" name="password" onKeyUp="passwordlength();value=value.replace(/[\W]/g,'')" placeholder="请输入5-12位由数字或字母组成的密码">
+        <div id="tishi2" class="tishi2"></div>
+        <input type="password" class="form-control" id="password2" onKeyUp="passsame();value=value.replace(/[\W]/g,'')"  >
+        <div id="tishi3" class="tishi3"></div>
+        <input type="text" class="form-control" id="uName"  name="uName" onKeyUp="nameelength()" placeholder="请输入您的昵称" >
+        <div id="tishi4" class="tishi4"></div>
+     <div class="bord">
+        <select id="dynasty" class="form-control selectpicker" id="dynasty"  name="dynasty" data-size="5" multiple title="请选择一项或多项" >
+            <option value="1">战国前</option>
+            <option value="2">秦汉三国</option>
+            <option value="3">东晋南北朝</option>
+            <option value="4">隋唐</option>
+            <option value="5">宋元明清</option>
+        </select>
+
+        <select id="category" class="form-control selectpicker" id="category"  name="category" multiple title="请选择一项或多项" >
+            <option>画卷</option>
+            <option>乐器</option>
+            <option>瓷器</option>
+            <option>摆件</option>
+            <option>祭祀</option>
+            <option>其他</option>
+
+        </select>
+        <select id="area" class="form-control selectpicker" id="area" name="area" multiple title="请选择一项或多项">
+            <option>华南</option>
+            <option>东部</option>
+            <option>华北</option>
+            <option>西部</option>
+        </select>
+         <input type="submit" value="确认" class="submit1" id="submit">
+
+     </div>
+    </div>
+    </div>
+</form>
+<div class="d"> <a href="#" > 返回首页>> </a></div>
+
+<script src="js/jquery.min.js?v=2.1.4"></script>
+    <script src="js/bootstrap.min.js?v=3.3.6"></script>
+    <script src="js/plugins/peity/jquery.peity.min.js"></script>
+    <script src="js/plugins/iCheck/icheck.min.js"></script>
+    <script src="js/demo/peity-demo.js"></script>
+    <script src="js/bootstrap-paginator.min.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
+    <script src="js/tools.js"></script>
+    
+    <script type="text/javascript">
+    $('#user').validate({
+			submitHandler: function (form) {
+				addToDB($('#user').attr("action"), $('#user').serialize());
+			}
+		});	
+    </script>
+</body>
+</html>

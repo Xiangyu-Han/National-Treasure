@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>国家宝藏-文物页面</title>
+    <link href="唐摹王羲之一门书翰卷.css" rel="stylesheet" media="screen">
+    <link href="css8/bootstrap.min.css" rel="stylesheet" media="screen">
+    <script type="text/javascript" src="jquery8/jquery.js"></script>
+    <script src="js8/bootstrap.min.js"></script>
+</head>
+<body class="a">
+<!--头部-->
+<div class="b">
+    <img src="img唐摹王羲之一门书翰卷/banner.jpg" alt="张国立" style="height: auto;width: 98.9vw;">
+    <div id="header">
+        <div class="btn-group" id="user">
+            <a href=""><button type="button" class="btn btn-link" style="font-size: 1.3vw;width: 14vw">昵称<p id="user_name"></p></button></a>
+        </div>
+        <div class="btn-group" style="margin-left: 6vw">
+            <a href="shouye.html"><button type="button" class="btn btn-link">国家宝藏</button></a>
+        </div>
+        <div class="btn-group" >
+            <a href="museum.html"><button type="button" class="btn btn-link">博览群馆</button></a>
+        </div>
+        <div class="btn-group" >
+            <a href="wwzs.html"><button type="button" class="btn btn-link">文物之声</button></a>
+        </div>
+        <div class="btn-group" >
+            <a href="shipin.html"><button type="button" class="btn btn-link">系列视频</button></a>
+        </div>
+        <div class="btn-group" >
+            <a href="about.html"><button type="button" class="btn btn-link">关于我们</button></a>
+        </div>
+    </div>
+  <!--主体-->
+    <div><img src="img唐摹王羲之一门书翰卷/1.jpg" class="picture1" alt="唐摹王羲之一门书翰卷" /></div>
+    <div><img src="img唐摹王羲之一门书翰卷/2.jpg" class="picture2" alt="唐摹王羲之一门书翰卷2" /></div>
+    <div class="wenben1">此帖纵26.3厘米，横253.8厘米，是唐代摹本。公元697年，武则天将王羲之后人王方庆进献的王氏一门十卷二十八人法书真迹交予弘文馆勾摹留存<br>&nbsp;&nbsp;&nbsp;&nbsp;真迹已佚，现仅存此卷举本，为一卷七人的法书。从法帖上王方庆留下的记录得知这一年是万岁通天二年，因此又以年号称该帖为“万岁道天帖”。辽博所藏此本在流传过程中曾两遭火动，至今仍清晰可见火烧的痕迹，能保留至今实为不易。此卷勾摹精妙，有“下真迹一等”之普，是传世勾填最为精到、年代最为确切、真迹来源最为可靠的二王法帖。
+    </div>
+    <div><img src="img唐摹王羲之一门书翰卷/3.jpg" class="picture3" alt="唐摹王羲之一门书翰卷3" /></div>
+    <div><img src="img唐摹王羲之一门书翰卷/4.jpg" class="picture4" alt="唐摹王羲之一门书翰卷4" /></div>
+    <div class="wenben2"><h1 style="text-indent:1.2em;">唐摹王羲之一门书翰卷</h1>原帖已散失。由于写的内容是家书，书体也多变，据见过原帖的摹本说，原帖是更为随意大气的性格。但摹本出自帝王书院，而且是用非常精细的手法复制的。所以虽说长相几乎一样，摹本却是相当严肃认真的性格。原本是复制古物的摹本，现在也度过了1300多年的岁月了......经过诸多磨难两次火烧，原本是长发烧成了短发。精通复制书法的技术，最近对扫描仪和打印机很感兴趣。奈何年龄上是个老人，打印机不听他的话。</div>
+</div>
+<!--页脚-->
+<div class="footer">
+    <div class="footer2">
+        <a href="#" class="FontColor2">意见反馈</a><br>
+        <a href="#" class="FontColor2">账号申诉</a><br>
+        <a href="#" class="FontColor2">智能咨询</a><br>
+    </div>
+    <div class="footer3">
+        <a href="#" class="FontColor2">常见问题</a><br>
+        <a href="#" class="FontColor2">加入我们</a><br>
+        <a href="#" class="FontColor2">在线留言</a><br>
+    </div>
+</div>
+
+<script src="js/jquery.min.js?v=2.1.4"></script>
+<script src="js/jquery.cookie.js"></script>
+<script type="text/javascript">
+    $(document).ready(function(){
+        var name = $.cookie("uName");
+        console.log(name);
+        if((name != null)){
+            $("#user_name").empty();
+            $("#user_name").append(name);
+        }
+    });
+</script>
+</body>
+</html>

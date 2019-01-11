@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>国家宝藏-文物页面</title>
+    <link href="css8/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="曾侯乙编钟.css" rel="stylesheet" media="screen">
+    <script type="text/javascript" src="jquery8/jquery.js"></script>
+    <script src="js8/bootstrap.min.js"></script>
+</head>
+<body class="a">
+<!--头部-->
+<div class="b">
+    <img src="img曾侯乙编钟/banner.jpg" alt="张国立" style="height: auto;width: 98.9vw;">
+    <div id="header">
+        <div class="btn-group" id="user">
+            <a href=""><button type="button" class="btn btn-link" style="font-size: 1.3vw;width: 14vw">昵称<p id="user_name"></p></button></a>
+        </div>
+        <div class="btn-group" style="margin-left: 6vw">
+            <a href="shouye.html"><button type="button" class="btn btn-link">国家宝藏</button></a>
+        </div>
+        <div class="btn-group" >
+            <a href="museum.html"><button type="button" class="btn btn-link">博览群馆</button></a>
+        </div>
+        <div class="btn-group" >
+            <a href="wwzs.html"><button type="button" class="btn btn-link">文物之声</button></a>
+        </div>
+        <div class="btn-group" >
+            <a href="shipin.html"><button type="button" class="btn btn-link">系列视频</button></a>
+        </div>
+        <div class="btn-group" >
+            <a href="about.html"><button type="button" class="btn btn-link">关于我们</button></a>
+        </div>
+    </div>
+  <!--主体-->
+    <div><img src="img曾侯乙编钟/1.jpg" class="picture1" alt="骨笛" /></div>
+    <div><img src="img曾侯乙编钟/2.jpg" class="picture2" alt="骨笛2" /></div>
+    <div class="wenben1">曾侯乙编钟，战国早期文物，中国首批禁止出国（境）展览文物。1978年在湖北随县（今随州市）出土。是由六十五件青铜编钟组成的庞大乐器，其音域跨五个半八度，十二个半音齐备。它高超的铸造技术和良好的音乐性能，改写了世界音乐史，被中外专家、学者称之为“稀世珍宝”。<br>&nbsp;&nbsp;&nbsp;&nbsp;编钟是中国古代大型打击乐器，兴起于西周，盛于春秋战国直至秦汉。中国是制造和使用乐钟最早的国家。它用青铜铸成，由大小不同的扁圆钟按照音调高低的次序排列起来，悬挂在一个巨大的钟架上，用丁字形的木锤和长形的棒分别敲打铜钟，能发出不同的乐音，因为每个钟的音调不同，按照音谱敲打，可以演奏出美妙的乐曲。引在木架上悬挂一组音调高低不同的铜钟，由古代侍女用小木槌敲打奏乐。</div>
+    <div><img src="img曾侯乙编钟/3.jpg" class="picture3" alt="骨笛3" /></div>
+    <div><img src="img曾侯乙编钟/4.jpg" class="picture4" alt="骨笛4" /></div>
+    <div><img src="img曾侯乙编钟/5.jpg" class="picture5" alt="骨笛5" /></div>
+</div>
+<!--页脚-->
+<div class="footer">
+    <div class="footer2">
+        <a href="#" class="FontColor2">意见反馈</a><br>
+        <a href="#" class="FontColor2">账号申诉</a><br>
+        <a href="#" class="FontColor2">智能咨询</a><br>
+    </div>
+    <div class="footer3">
+        <a href="#" class="FontColor2">常见问题</a><br>
+        <a href="#" class="FontColor2">加入我们</a><br>
+        <a href="#" class="FontColor2">在线留言</a><br>
+    </div>
+</div>
+
+ <script src="js/jquery.min.js?v=2.1.4"></script>
+	<script src="js/jquery.cookie.js"></script>    
+	<script type="text/javascript">
+	$(document).ready(function(){
+		 var name = $.cookie("uName");
+   		 console.log(name);
+    	if((name != null)){
+	   		  $("#user_name").empty();
+	    	  $("#user_name").append(name);
+    	}
+ 	});
+</script>
+
+</body>
+</html>

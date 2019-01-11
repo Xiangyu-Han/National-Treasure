@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>国家宝藏-文物页面</title>
+    <link href="各种釉彩大瓶.css" rel="stylesheet" media="screen">
+    <link href="css8/bootstrap.min.css" rel="stylesheet" media="screen">
+    <script type="text/javascript" src="jquery8/jquery.js"></script>
+    <script src="js8/bootstrap.min.js"></script>
+</head>
+<body class="a">
+<!--头部-->
+<div class="b">
+    <img src="img各种釉彩大瓶/banner.jpg" alt="张国立" style="height: auto;width: 98.9vw;">
+    <div id="header">
+        <div class="btn-group" id="user">
+            <a href=""><button type="button" class="btn btn-link" style="font-size: 1.3vw;width: 14vw">昵称<p id="user_name"></p></button></a>
+        </div>
+        <div class="btn-group" style="margin-left: 6vw">
+            <a href="shouye.html"><button type="button" class="btn btn-link">国家宝藏</button></a>
+        </div>
+        <div class="btn-group" >
+            <a href="museum.html"><button type="button" class="btn btn-link">博览群馆</button></a>
+        </div>
+        <div class="btn-group" >
+            <a href="wwzs.html"><button type="button" class="btn btn-link">文物之声</button></a>
+        </div>
+        <div class="btn-group" >
+            <a href="shipin.html"><button type="button" class="btn btn-link">系列视频</button></a>
+        </div>
+        <div class="btn-group" >
+            <a href="about.html"><button type="button" class="btn btn-link">关于我们</button></a>
+        </div>
+    </div>
+  <!--主体-->
+    <div><img src="img各种釉彩大瓶/1.jpg" class="picture1" alt="各种釉色大瓶" /></div>
+    <div><img src="img各种釉彩大瓶/2.jpg" class="picture2" alt="各种釉色大瓶2" /></div>
+    <div class="wenben1">从宋朝以来，中国瓷器开始了它的繁荣昌盛，每朝每代都有代表性的釉色瓷出现，在每年的拍卖会上这些瓷器每每都能够刷新中国瓷交易记录。这期中宋朝当属汝、哥、官、均、定瓷；元有元青花、霁蓝釉；明有五彩、斗彩；清有珐琅彩、粉彩。这些瓷器除了它们的烧造工艺当今无法轻易仿制外，与它们的年代稀少性有很大关系。而瓷母几乎包含了以上所有。<br>&nbsp;&nbsp;&nbsp;&nbsp;瓷母器身自上而下装饰的釉跟彩达15层之多。所使用的釉上彩装饰品种有金彩、珐琅彩、粉彩等；釉下彩有青花装饰；还有釉上彩与釉下彩相结合的斗彩。使用的釉有仿汝釉、仿哥釉、仿官釉、窑变釉、粉青釉、霁蓝釉、松石绿釉、酱釉等。从它所装饰使用的釉彩与它少有的身高86.4cm,,给它取名为“各种釉彩大瓶”再合适不过。</div>
+    <div><img src="img各种釉彩大瓶/3.jpg" class="picture3" alt="各种釉色大瓶3" /></div>
+    <div><img src="img各种釉彩大瓶/4.jpg" class="picture4" alt="各种釉色大瓶4" /></div>
+    <div class="wenben2"><h1 style="text-indent:3em;">各种釉色大瓶</h1>“我巨可爱！”<br>和某个位皇帝一样的迷之自信。有着瓷器之母的称号实际却更像各家瓷器的孩子。今天也运气超好，捡到了旅客遗失的头奖彩票，因为不会兑换扔掉了。</div>
+</div>
+<!--页脚-->
+<div class="footer">
+    <div class="footer2">
+        <a href="#" class="FontColor2">意见反馈</a><br>
+        <a href="#" class="FontColor2">账号申诉</a><br>
+        <a href="#" class="FontColor2">智能咨询</a><br>
+    </div>
+    <div class="footer3">
+        <a href="#" class="FontColor2">常见问题</a><br>
+        <a href="#" class="FontColor2">加入我们</a><br>
+        <a href="#" class="FontColor2">在线留言</a><br>
+    </div>
+</div>
+
+<script src="js/jquery.min.js?v=2.1.4"></script>
+    <script src="js/jquery.cookie.js"></script>    
+    <script type="text/javascript">
+    $(document).ready(function(){
+         var name = $.cookie("uName");
+         console.log(name);
+        if((name != null)){
+              $("#user_name").empty();
+              $("#user_name").append(name);
+        }
+    });
+</script>
+
+</body>
+</html>

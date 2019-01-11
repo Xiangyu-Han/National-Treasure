@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>国家宝藏-文物页面</title>
+    <link href="贾湖骨笛.css" rel="stylesheet" media="screen">
+    <link href="css8/bootstrap.min.css" rel="stylesheet" media="screen">
+    <script type="text/javascript" src="jquery8/jquery.js"></script>
+    <script src="js8/bootstrap.min.js"></script>
+</head>
+<body class="a">
+<!--头部-->
+<div class="b">
+    <img src="img贾湖骨笛/banner.jpg" alt="张国立" style="height: auto;width: 98.9vw;">
+    <div id="header">
+        <div class="btn-group" id="user">
+            <a href=""><button type="button" class="btn btn-link" style="font-size: 1.3vw;width: 14vw">昵称<p id="user_name"></p></button></a>
+        </div>
+        <div class="btn-group" style="margin-left: 6vw">
+            <a href="shouye.html"><button type="button" class="btn btn-link">国家宝藏</button></a>
+        </div>
+        <div class="btn-group" >
+            <a href="museum.html"><button type="button" class="btn btn-link">博览群馆</button></a>
+        </div>
+        <div class="btn-group" >
+            <a href="wwzs.html"><button type="button" class="btn btn-link">文物之声</button></a>
+        </div>
+        <div class="btn-group" >
+            <a href="shipin.html"><button type="button" class="btn btn-link">系列视频</button></a>
+        </div>
+        <div class="btn-group" >
+            <a href="about.html"><button type="button" class="btn btn-link">关于我们</button></a>
+        </div>
+    </div>
+  <!--主体-->
+    <div><img src="img贾湖骨笛/1.jpg" class="picture1" alt="骨笛" /></div>
+    <div><img src="img贾湖骨笛/2.jpg" class="picture2" alt="骨笛2" /></div>
+    <div class="wenben1">1987年出土于河南舞阳贾湖遗址282号墓，长23.1厘米，七孔，距今8000多年，是贾湖骨笛中保存最为完整，经现代测量音准最佳的一支。该遗址目前出土骨笛40余支，多为七孔，个别为二孔、五孔、六孔或八孔，皆以鹤类禽鸟中空的尺骨制成，距今9000至7500年，按照年代早晚，依次可以吹费出五声、六声至七声音阶。贾湖骨笛是迄今为止中国发现的时代最早的可吹奏管乐器，改写了中国音乐史，堪称中国古代音乐文明史的奇迹，也是世界音乐文明的杰出代表。</div>
+    <div><img src="img贾湖骨笛/3.jpg" class="picture3" alt="骨笛3" /></div>
+    <div><img src="img贾湖骨笛/4.jpg" class="picture4" alt="骨笛4" /></div>
+    <div><img src="img贾湖骨笛/5.jpg" class="picture5" alt="骨笛5" /></div>
+</div>
+<!--页脚-->
+<div class="footer">
+    <div class="footer2">
+        <a href="#" class="FontColor2">意见反馈</a><br>
+        <a href="#" class="FontColor2">账号申诉</a><br>
+        <a href="#" class="FontColor2">智能咨询</a><br>
+    </div>
+    <div class="footer3">
+        <a href="#" class="FontColor2">常见问题</a><br>
+        <a href="#" class="FontColor2">加入我们</a><br>
+        <a href="#" class="FontColor2">在线留言</a><br>
+    </div>
+</div>
+
+<script src="js/jquery.min.js?v=2.1.4"></script>
+    <script src="js/jquery.cookie.js"></script>    
+    <script type="text/javascript">
+    $(document).ready(function(){
+         var name = $.cookie("uName");
+         console.log(name);
+        if((name != null)){
+              $("#user_name").empty();
+              $("#user_name").append(name);
+        }
+    });
+</script>
+
+</body>
+</html>

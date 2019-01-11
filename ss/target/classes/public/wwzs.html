@@ -1,0 +1,387 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>文物之声</title>
+	<link rel="stylesheet" type="text/css" href="css9/bootstrap.min.css">
+	<script type="text/javascript" src="jquery9/jquery-3.3.1.js"></script>
+	<script type="text/javascript" src="js9/bootstrap.min.js"></script>
+
+	<style type="text/css">
+/*HTML背景样式*/
+		body {
+			background-image: url('images/文物之声 背景.jpg');
+			background-size: 100vw auto;
+			background-repeat: no-repeat;
+		}
+/*头部按钮样式*/
+		#header{
+			margin:2vw 3vw;
+		}
+		#header div{
+			margin-left: 2.5vw;
+			width: 13%;
+			height: 20%;
+			text-align: center;
+		}
+		#header div button{
+			background: rgba(207,169,114,0.5);
+			font-family:"华文新魏";
+			font-size: 2vw;
+			color: #bfad5a;
+			height: 4vw;
+			-webkit-border-radius: 15px; 
+		}
+/*选择栏样式*/
+		#tb1 {
+			font-family: "华文新魏";
+			font-size: 2vw;
+			color: #ddd;
+		}
+		#tb1 td{
+			padding-left: 3vw;
+			text-align: center;
+		}
+		#tb1 td a{
+			font-size: 1.5vw;
+			text-align: center;
+			color: #ddd;
+		}
+/*图片列表样式*/
+    
+		#imglist{
+			margin-left: 4vw;
+			margin-top: 4vw;
+			height:43vw;
+		}
+		#imglist>table>tbody>tr>td{
+			text-align: center;
+			border: 0;
+		}
+		#imglist>table td img{
+			width: 20vw;
+			height: 20vw;
+		}
+		.div1{
+			float:right;
+			padding-right:2vw;
+		}
+		#pagintor{
+			font-size:1vw;
+		}
+		
+/*底部文字样式*/
+		.row div ul{
+			font-family: "华文新魏";
+			font-size: 1.5vw;
+		}
+		.row div ul a{
+			color: rgba(207,169,114,0.5);
+		}
+		
+
+	</style>
+
+</head>
+<body>
+	
+<!--头部-->
+	<img src="images/张国立banner.jpg" alt="张国立" style="height: auto;width: 100vw;">
+	<div id="header">
+		<div class="btn-group" id="user">
+			<a href=""><button type="button" class="btn btn-link" style="font-size: 1.3vw;width: 14vw">昵称<p id="user_name"></p></button></a>
+		</div>
+		<div class="btn-group" style="margin-left: 6vw">
+			<a href="shouye.html"><button type="button" class="btn btn-link">国家宝藏</button></a>
+		</div>
+		<div class="btn-group" >
+			<a href="museum.html"><button type="button" class="btn btn-link">博览群馆</button></a>
+		</div>
+		<div class="btn-group" >
+			<a href=""><button type="button" class="btn btn-link">文物之声</button></a>
+		</div>
+		<div class="btn-group" >
+			<a href="shipin.html"><button type="button" class="btn btn-link">系列视频</button></a>
+		</div>
+		<div class="btn-group" >
+			<a href="about.html"><button type="button" class="btn btn-link">关于我们</button></a>
+		</div>
+	</div>
+	
+<!--中间内容-->
+	<div class="container">
+		<div class="row">
+			<div class="col-md-9 col-sm-9 col-xs-9">
+				<table id="tb1">
+					<tr>
+						<td><b>朝代</b></td>
+						<td><a href="javascript:void(0);" onclick='getIntent1("战国前")'>战国前</a></td>
+						<td><a href="javascript:void(0);" onclick='getIntent1("秦汉三国")'>秦汉三国</a></td>
+						<td><a href="javascript:void(0);" onclick='getIntent1("东晋南北朝")'>东晋南北朝</a></td>
+						<td><a href="javascript:void(0);" onclick='getIntent1("隋唐")'>隋唐</a></td>
+						<td><a href="javascript:void(0);" onclick='getIntent1("宋元明清")'>宋元明清</a></td>
+					</tr>
+					<tr>
+						<td><b>类别</b></td>
+						<td><a href="javascript:void(0);" onclick='getIntent2("画卷")'>画卷</a></td>
+						<td><a href="javascript:void(0);" onclick='getIntent2("乐器")'>乐器</a></td>
+						<td><a href="javascript:void(0);" onclick='getIntent2("瓷器")'>瓷器</a></td>
+						<td><a href="javascript:void(0);" onclick='getIntent2("摆件")'>摆件</a></td>
+						<td><a href="javascript:void(0);" onclick='getIntent2("祭祀")'>祭祀</a></td>
+					</tr>
+					<tr>
+						<td><b>地区</b></td>
+						<td><a href="javascript:void(0);" onclick='getIntent3("华中")'>华中</a></td>
+						<td><a href="javascript:void(0);" onclick='getIntent3("华南")'>华南</a></td>
+						<td><a href="javascript:void(0);" onclick='getIntent3("东部")'>东部</a></td>
+						<td><a href="javascript:void(0);" onclick='getIntent3("华北")'>华北</a></td>
+						<td><a href="javascript:void(0);" onclick='getIntent3("西部")'>西部</a></td>
+					</tr>
+				</table>
+			</div>
+			<div class="col-md-3 col-sm-3 col-xs-3">
+			<form id="museum" role="form" action="/museum/museum/getCulturalBySearch"  method="post">
+				<div class="input-group pull-right" id="sousuo">
+					<input type="text" class="form-control" id="search" name="search" placeholder="请输入文物">
+					<span class="input-group-btn">
+						<button class="btn btn-default" type="submit"><img src="images/搜索.png"></button>
+					</span>
+				</div>
+			</form>	
+			</div>
+		</div>
+	</div>
+
+	<div class="container" id="imglist">
+		<table class="table1">
+			<tbody id="tbody1">
+			
+			</tbody>
+    	</table>
+	</div>
+	
+	<div class="div1"  id="fenyelan"><ul id="pagintor"></ul></div>
+		
+	
+<!--尾部-->
+	<div class="container">
+		<div class="row" style="margin-top: 12vw;text-align: center">
+			<div class="col-md-5 col-sm-5 col-xs-5">
+				<ul style="list-style-type: none;margin-left: -3vw">
+					<li><a href="">意见反馈</a></li>
+					<li><a href="">账号申诉</a></li>
+					<li><a href="">智能咨询</a></li>
+				</ul>
+			</div>
+			<div class="col-md-6 col-sm-6 col-xs-6" style="padding-left: 15vw">
+				<ul style="list-style-type: none;">
+					<li><a href="">常见问题</a></li>
+					<li><a href="">加入我们</a></li>
+					<li><a href="">在线留言</a></li>
+				</ul>
+			</div>
+			 
+	</div>
+	</div>
+	
+</body>
+	
+
+<script src="js/jquery.min.js?v=2.1.4"></script>
+    <script src="js/bootstrap.min.js?v=3.3.6"></script>
+    <script src="js/plugins/peity/jquery.peity.min.js"></script>
+    <script src="js/plugins/iCheck/icheck.min.js"></script>
+    <script src="js/demo/peity-demo.js"></script>
+    <script src="js/bootstrap-paginator.min.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
+	<script src="js/jquery.cookie.js"></script>
+    <script src="js/tools.js"></script>
+	<script type="text/javascript">
+	
+	
+	
+	$(document).ready(function(){
+		 var name = $.cookie("uName");
+	        console.log(name);
+	        if((name != null)){
+	            $("#user_name").empty();
+	            $("#user_name").append(name);
+	        }
+		pageTools(1,4);
+		getList(1);
+	});
+	
+	function getList(pageNo) {
+		$.ajax({
+			url : "museum/getCulturalList",
+			type : "post",
+			data : "pageNo=" + pageNo,
+			success : function(data) {
+				if (data.statusCode == "200") {
+					var ss = '';
+					  $("#tbody1").empty();
+					  for (var i = 0; i < data.data.list.length; i++) {
+						  	var str = '';
+						    var str1='';
+							var str2='';
+							if(i%4==0){
+								str1='<tr>';
+							}	
+							if((i+1)%4==0){
+								str2='</tr>';
+							}							
+						str=str1+'<td>' + '<a href=\"'+data.data.list[i].cUrl+'\">'+'<img src=\"' +data.data.list[i].cPicture+'\" alt=\"这是一个图片\"/>'+'</td>'+str2;
+						
+					    ss = ss + str;
+					}
+					  $("#tbody1").append(ss);
+				}
+			},
+			error : function(data) {
+				alert(JSON.stringify(data));
+			}
+		})
+	}
+	
+
+	function getIntent1(cDynasty) {                 //筛选朝代
+		$.ajax({
+			url : "museum/getCulturalByDynasty?cDynasty="+cDynasty,
+			type : "post",
+				success : function(data) {
+				if (data.statusCode == "200") {
+					var ss = '';
+					  $("#tbody1").empty();
+					  $("#fenyelan").remove();
+					  for (var i = 0; i < data.data.length; i++) {
+						  	var str = '';
+						    var str1='';
+							var str2='';
+							if(i%4==0){
+								str1='<tr>';
+							}	
+							if((i+1)%4==0){
+								str2='</tr>';
+							}							
+						str=str1+'<td>' + '<a href=\"'+data.data[i].cUrl+'\">'+'<img src=\"' +data.data[i].cPicture+'\" alt=\"这是一个图片\"/>'+'</td>'+str2;
+						
+					    ss = ss + str;
+					}
+					  $("#tbody1").append(ss);
+				}
+			},
+			error : function(data) {
+				alert(JSON.stringify(data));
+			}
+		})
+	}
+	
+
+	function getIntent2(cCategory) {                 //筛选类别 
+		$.ajax({
+			url : "museum/getCulturalByCategory?cCategory="+cCategory,
+			type : "post",
+				success : function(data) {
+				if (data.statusCode == "200") {
+					var ss = '';
+					  $("#tbody1").empty();
+					  $("#fenyelan").remove();
+					  for (var i = 0; i < data.data.length; i++) {
+						  	var str = '';
+						    var str1='';
+							var str2='';
+							if(i%4==0){
+								str1='<tr>';
+							}	
+							if((i+1)%4==0){
+								str2='</tr>';
+							}							
+						str=str1+'<td>' + '<a href=\"'+data.data[i].cUrl+'\">'+'<img src=\"' +data.data[i].cPicture+'\" alt=\"这是一个图片\"/>'+'</td>'+str2;
+						
+					    ss = ss + str;
+					}
+					  $("#tbody1").append(ss);
+				}
+			},
+			error : function(data) {
+				alert(JSON.stringify(data));
+			}
+		})
+	}
+	
+	function getIntent3(cArea) {                 //筛选地区 
+		$.ajax({
+			url : "museum/getCulturalByArea?cArea="+cArea,
+			type : "post",
+				success : function(data) {
+				if (data.statusCode == "200") {
+					var ss = '';
+					  $("#tbody1").empty();
+					  $("#fenyelan").remove();
+					  for (var i = 0; i < data.data.length; i++) {
+						  	var str = '';
+						    var str1='';
+							var str2='';
+							if(i%4==0){
+								str1='<tr>';
+							}	
+							if((i+1)%4==0){
+								str2='</tr>';
+							}							
+						str=str1+'<td>' + '<a href=\"'+data.data[i].cUrl+'\">'+'<img src=\"' +data.data[i].cPicture+'\" alt=\"这是一个图片\"/>'+'</td>'+str2;
+					
+					    ss = ss + str;
+					}
+					  $("#tbody1").append(ss);
+				}
+			},
+			error : function(data) {
+				alert(JSON.stringify(data));
+			}
+		})
+	}
+	
+	
+	
+	$('#museum').validate({
+		submitHandler: function (form) {
+			getSearch($('#museum').attr("action"),$('#museum').serialize())
+		}
+	});
+	//搜索
+	function getSearch(url,search) {                
+		$.ajax({
+			url : url,
+			type : "post",
+			data:search,
+				success : function(data) {
+				
+				if (data.statusCode == "200") {
+					var ss = '';
+					  $("#tbody1").empty();
+					  $("#fenyelan").remove();
+					  for (var i = 0; i < data.data.length; i++) {
+						  	var str = '';
+						    var str1='';
+							var str2='';
+							if(i%4==0){
+								str1='<tr>';
+							}	
+							if((i+1)%4==0){
+								str2='</tr>';
+							}							
+						str=str1+'<td>' + '<a href=\"'+data.data[i].cUrl+'\">'+'<img src=\"' +data.data[i].cPicture+'\" alt=\"这是一个图片\"/>'+'</td>'+str2;
+						
+					    ss = ss + str;
+					}
+					  $("#tbody1").append(ss);
+				}
+			},
+			error : function(data) {
+				alert(JSON.stringify(data));
+			}
+		})
+	}
+</script>
+	
+</html>

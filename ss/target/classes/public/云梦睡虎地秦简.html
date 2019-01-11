@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>国家宝藏-文物页面</title>
+    <link href="云梦睡虎地秦简.css" rel="stylesheet" media="screen">
+    <link href="css8/bootstrap.min.css" rel="stylesheet" media="screen">
+    <script type="text/javascript" src="jquery8/jquery.js"></script>
+    <script src="js8/bootstrap.min.js"></script>
+</head>
+<body class="a">
+<!--头部-->
+<div class="b">
+    <img src="img云梦睡虎地秦简/banner.jpg" alt="张国立" style="height: auto;width: 98.9vw;">
+    <div id="header">
+        <div class="btn-group" id="user">
+            <a href=""><button type="button" class="btn btn-link" style="font-size: 1.3vw;width: 14vw">昵称<p id="user_name"></p></button></a>
+        </div>
+        <div class="btn-group" style="margin-left: 6vw">
+            <a href="shouye.html"><button type="button" class="btn btn-link">国家宝藏</button></a>
+        </div>
+        <div class="btn-group" >
+            <a href="museum.html"><button type="button" class="btn btn-link">博览群馆</button></a>
+        </div>
+        <div class="btn-group" >
+            <a href="wwzs.html"><button type="button" class="btn btn-link">文物之声</button></a>
+        </div>
+        <div class="btn-group" >
+            <a href="shipin.html"><button type="button" class="btn btn-link">系列视频</button></a>
+        </div>
+        <div class="btn-group" >
+            <a href="about.html"><button type="button" class="btn btn-link">关于我们</button></a>
+        </div>
+    </div>
+  <!--主体-->
+    <div><img src="img云梦睡虎地秦简/1.jpg" class="picture1" alt="云梦睡虎地秦简" /></div>
+    <div><img src="img云梦睡虎地秦简/2.jpg" class="picture2" alt="云梦睡虎地秦简2" /></div>
+    <div class="wenben1">睡虎地秦墓竹简，又称睡虎地秦简、云梦秦简，是指1975年12月在湖北省云梦县睡虎地秦墓中出土的大量竹简，这些竹简长23.1-27.8厘米，宽0.5-0.8厘米，内文为墨书秦隶，写于战国晚期及秦始皇时期，反映了篆书向隶书转变阶段的情况，其内容主要是秦朝时的法律制度、行政文书、医学著作以及关于吉凶时日的占书，为研究中国书法、秦帝国的政治、法律、经济、文化、医学等方面的发展历史提供了详实的资料，具有十分重要的学术价值。</div>
+    <div><img src="img云梦睡虎地秦简/3.jpg" class="picture3" alt="云梦睡虎地秦简3" /></div>
+    <div><img src="img云梦睡虎地秦简/4.jpg" class="picture4" alt="云梦睡虎地秦简4" /></div>
+    <div class="wenben2"><h1 style="text-indent:3em;">云梦睡虎地秦简</h1>喜欢法律，喜欢执法，大概是个五毛了<br>在地下呆了两千多年，无聊间和睡虎地(发掘地)的虎灵成了好朋友。现代法律太复杂了，(发掘)出来以后学了不久眼睛就近视了</div>
+</div>
+<!--页脚-->
+<div class="footer">
+    <div class="footer2">
+        <a href="#" class="FontColor2">意见反馈</a><br>
+        <a href="#" class="FontColor2">账号申诉</a><br>
+        <a href="#" class="FontColor2">智能咨询</a><br>
+    </div>
+    <div class="footer3">
+        <a href="#" class="FontColor2">常见问题</a><br>
+        <a href="#" class="FontColor2">加入我们</a><br>
+        <a href="#" class="FontColor2">在线留言</a><br>
+    </div>
+</div>
+<script src="js/jquery.min.js?v=2.1.4"></script>
+<script src="js/jquery.cookie.js"></script>
+<script type="text/javascript">
+    $(document).ready(function(){
+        var name = $.cookie("uName");
+        console.log(name);
+        if((name != null)){
+            $("#user_name").empty();
+            $("#user_name").append(name);
+        }
+    });
+</script>
+</body>
+</html>
